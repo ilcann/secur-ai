@@ -7,7 +7,7 @@ ROOT_ENV_FILE=".env"
 declare -A apps
 apps["backend-fastapi"]=""
 apps["backend-nestjs"]="DATABASE_URL JWT_SECRET JWT_EXPIRES_IN"
-apps["web"]=""
+apps["frontend-nextjs"]=""
 
 # Ortak değişkenler (boşlukla ayrılmış)
 common_vars="VITE_WEB_HOST VITE_WEB_PORT NESTJS_HOST NESTJS_PORT FASTAPI_HOST FASTAPI_PORT"
