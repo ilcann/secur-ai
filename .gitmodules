@@ -4,3 +4,6 @@
 [submodule "apps/backend-fastapi"]
 	path = apps/backend-fastapi
 	url = https://github.com/ilcann/secur-ai-backend-fastapi.git
+[submodule "apps/frontend-nextjs"]
+	path = apps/frontend-nextjs
+	url = https://github.com/ilcann/secur-ai-frontend-nextjs.git
