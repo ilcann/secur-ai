@@ -10,7 +10,7 @@ $apps = @{
 }
 
 # Ortak değişkenler
-$commonVars = "VITE_WEB_HOST VITE_WEB_PORT NESTJS_HOST NESTJS_PORT FASTAPI_HOST FASTAPI_PORT"
+$commonVars = "NEXTJS_HOST NEXTJS_PORT NESTJS_HOST NESTJS_PORT FASTAPI_HOST FASTAPI_PORT"
 
 foreach ($app in $apps.Keys) {
     $vars   = $apps[$app] -split " "
