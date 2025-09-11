@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: dev-postgres
+    environment:
+      POSTGRES_USER: devuser
+      POSTGRES_PASSWORD: devpass
+      POSTGRES_DB: devdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  backend:
+    build: ./apps/backend-nestjs
+    ports:
+      - "3002:3002"
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
