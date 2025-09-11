@@ -23,7 +23,7 @@ if (Test-Path ".env") {
 # 3️⃣ Install Python dependencies (FastAPI backend)
 Write-Host "🐍 Setting up Python virtual environment..."
 Set-Location "apps/backend-fastapi"
-python3.13 -m venv .venv
+python -m venv .venv
 & ".venv/Scripts/activate"
 poetry install
 deactivate

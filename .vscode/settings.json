@@ -3,5 +3,6 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  "python.defaultInterpreterPath": "${workspaceFolder}/apps/backend-fastapi/.venv/Scripts/python.exe",
 }

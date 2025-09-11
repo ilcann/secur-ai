@@ -23,7 +23,7 @@ fi
 # 3️⃣ Install Python dependencies (FastAPI backend)
 echo "🐍 Setting up Python virtual environment..."
 cd apps/backend-fastapi
-python3.13 -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 poetry install
 deactivate
