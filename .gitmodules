@@ -7,3 +7,7 @@
 [submodule "apps/frontend-nextjs"]
 	path = apps/frontend-nextjs
 	url = https://github.com/ilcann/secur-ai-frontend-nextjs.git
+[submodule "apps/frontend-react"]
+	path = apps/frontend-react
+	url = https://github.com/ilcann/secur-ai-frontend-react.git
+	branch = main
