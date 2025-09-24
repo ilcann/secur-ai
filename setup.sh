@@ -11,9 +11,10 @@ pnpm install
 if [ -f ".env" ]; then
   if [ -x "./generate-env.sh" ]; then
     echo "🔐 .env found — running generate-env..."
-    ./generate-env
+    chmod +x ./generate-env.sh
+    ./generate-env.sh
   else
-    echo "⚠️ generate-env script not found or not executable"
+    echo "⚠️ generate-env.sh script not found or not executable"
     exit 1
   fi
 else
