@@ -6,7 +6,7 @@ ROOT_ENV_FILE=".env"
 # Uygulama adı -> ilgili değişken isimleri (boşlukla ayrılmış)
 declare -A apps
 apps["backend-fastapi"]=""
-apps["backend-nestjs"]="DATABASE_URL JWT_SECRET JWT_EXPIRES_IN"
+apps["backend-nestjs"]="REDIS_HOST REDIS_PORT DATABASE_URL JWT_SECRET JWT_EXPIRES_IN"
 apps["frontend-react"]=""
 
 # Ortak değişkenler (boşlukla ayrılmış)

@@ -9,7 +9,7 @@ pnpm install
 
 # 2️⃣ Run generate-env only if root .env exists
 if [ -f ".env" ]; then
-  if [ -x "./generate-env" ]; then
+  if [ -x "./generate-env.sh" ]; then
     echo "🔐 .env found — running generate-env..."
     ./generate-env
   else
