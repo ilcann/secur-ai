@@ -6,7 +6,7 @@ $rootEnvFile = ".env"
 $apps = @{
     "backend-fastapi" = ""
     "backend-nestjs"  = "DATABASE_URL JWT_SECRET JWT_EXPIRES_IN"
-    "frontend-nextjs" = ""
+    "frontend-react" = ""
 }
 
 # Ortak değişkenler
