@@ -1,10 +1,10 @@
 upstream backend-nestjs {
-    server 127.0.0.1:3002;
+    server localhost:3002;
     keepalive 64;
 }
 
 upstream frontend-react {
-    server 127.0.0.1:3000;
+    server localhost:3000;
     keepalive 64;
 }
 
@@ -27,6 +27,7 @@ server {
 
     # Backend (NestJS API + WebSocket)
     location /api/ {
+        rewrite ^/api/(.*)$ /$1 break;
         proxy_pass http://backend-nestjs;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
