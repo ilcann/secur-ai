@@ -33,7 +33,9 @@ cd -
 # 4️⃣ Generate Prisma client
 echo "🧬 Generating Prisma client..."
 cd apps/backend-nestjs
+npx prisma migrate deploy
 npx prisma generate
+pnpm run db:seed
 cd -
 
 echo "✅ Setup complete!"

@@ -24,7 +24,7 @@ if (Test-Path ".env") {
 Write-Host "🐍 Setting up Python virtual environment..."
 Set-Location "apps/backend-fastapi"
 python -m venv .venv
-& ".venv/Scripts/activate"
+& "$PWD\.venv\Scripts\Activate.ps1"
 poetry install
 deactivate
 Set-Location "../.."
@@ -32,11 +32,13 @@ Set-Location "../.."
 # 4️⃣ Generate Prisma client
 Write-Host "🧬 Generating Prisma client..."
 Set-Location "apps/backend-nestjs"
+npx prisma migrate deploy
 npx prisma generate
+pnpm run db:seed
 Set-Location "../.."
 
 Write-Host "✅ Setup complete!"
 Write-Host "ℹ️ To activate the Python environment, run:"
-Write-Host "   .\.venv\Scripts\activate"
+Write-Host "   .\.venv\Scripts\Activate.ps1"
 Write-Host "ℹ️ To start the development server, run:"
 Write-Host "   pnpm dev"
