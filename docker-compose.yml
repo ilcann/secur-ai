@@ -11,7 +11,14 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
-
+  redis: 
+    image: redis:latest
+    container_name: dev-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
   backend:
     build: ./apps/backend-nestjs
     ports:
@@ -21,3 +28,4 @@ services:
 
 volumes:
   postgres_data:
+  redis_data:
